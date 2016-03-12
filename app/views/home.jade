@@ -1,0 +1,16 @@
+.container
+  .order(ng-repeat='order in home.orders')
+    .row
+      .col-md-9
+        .row
+          .col-md-4
+            | Заказ №{{order.id}}
+          .col-md-4
+            | {{order.tel}}
+          .col-md-4
+            | {{order.code}}
+      .col-md-3
+        a(ng-click='home.archive(order)')
+          | Архивировать
+
+    | {{order.products}}
